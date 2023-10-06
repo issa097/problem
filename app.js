@@ -1,13 +1,110 @@
 
+// 5- Write a function that, takes an array of integers as input, iterates over the array, and returns a new array.
+//  The returned array should contain the result of raising 2 to the power of the original input element.
+// For example,([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
+// Use for and forEach and then map to solve this question to see the difference between the three ways
+
+let arr3 = [];
+let bas = 2;
+function num1() {
+  for (let i = 0; i < 5; i++) {
+    let prop = prompt("push");
+    arr3.push(bas ** prop);
+  }
+}
+num1();
+console.log(arr3);
+
+let arr4 = [];
+function num2() {
+  arr3.forEach((d) => {
+    arr4.push(d);
+  });
+}
+num2();
+console.log(arr4);
+
+let arr5 = [];
+function num3() {
+  arr3.map((d) => {
+    arr5.push(d);
+  });
+}
+num3();
+console.log(arr5);
+
+// 6- Write a function that, takes an array of numbers as input, uses map to return a new array where each element is either the string "even" or the string "odd", based on each value.
+// If any element in the array is not a number, the resulting array should have the string "N/A" in its place.
+// For example:([1,2,3,"Rawan"]) returns ['odd','even','odd','N/A'].
+
+let bbb = [];
+for (let i = 0; i < 5; i++) {
+  let iu = prompt("push ");
+  bbb.push(iu);
+}
+
+let bb = [];
+function issaa() {
+  bbb.map((d) => {
+    if (isNaN(d)) {
+      bb.push("N/A");
+    } else if (d % 2 == 0) {
+      bb.push("even");
+    } else if (d % 2 !== 0) {
+      bb.push("odd");
+    }
+  });
+}
+issaa();
+console.log(bb);
+
+// 7- Write a function named fizzbuzz that takes in an array of numbers.
+// Iterate over the array using forEach or map to determine the output based on several rules:
+//   - If a number is divisible by 3, add the word "Fizz" to the output array.
+//   - If the number is divisible by 5, add the word "Buzz" to the output array.
+//   - If the number is divisible by both 3 and 5, add the phrase "Fizz Buzz" to the output array.
+//   - Otherwise, add the number to the output array.
+// Return the resulting output array.
+
+let fizz = "fizz";
+let buzz = "buzz";
+for (let i = 1; i <= 10; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log(i + fizz + buzz);
+  } else if (i % 5 === 0) {
+    console.log(i + buzz);
+  } else if (i % 3 === 0) {
+    console.log(i + fizz);
+  } else {
+    console.log(i);
+  }
+}
+
+// let arr = ["Rawan", "Jafar", "Hind", "Muhammad", "Esraa", "Dareen"];
+// let newarr = [];
+// arr.forEach((d) => {
+//   newarr.push(d);
+// });
+// console.log(newarr);
+
+
+
+
+
+
+
+
+
+// higher order function
 
 // Ex7: Use forEach to  Return all the names in the array  [“Rawan", "Jafar", "Hind", "Muhammad", "Esraa", “Dareen”] using loops.
 
-let arr = ["Rawan", "Jafar", "Hind", "Muhammad", "Esraa", "Dareen"];
-let newarr = [];
-arr.forEach((d) => {
-  newarr.push(d);
+let arrc = ["Rawan", "Jafar", "Hind", "Muhammad", "Esraa", "Dareen"];
+let newarrc = [];
+arrc.forEach((d) => {
+  newarrc.push(d);
 });
-console.log(newarr);
+console.log(newarrc);
 
 // Ex8: Project an array of series into an array of {id, title} pairs using forEach()
 
@@ -15,6 +112,7 @@ let varsd = [];
 let vars = [];
 let varsw = [];
 
+// Ex 12: Create a function displayName that, given the pokemon data, below, uses reduce to return an array containing the names of the characters.
 function yy() {
   let newSeries = [
     {
@@ -225,3 +323,7 @@ var employee = {
 };
 
 employee.info.printAddress(); // ?
+
+
+
+
