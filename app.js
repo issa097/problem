@@ -112,7 +112,6 @@ let varsd = [];
 let vars = [];
 let varsw = [];
 
-// Ex 12: Create a function displayName that, given the pokemon data, below, uses reduce to return an array containing the names of the characters.
 function yy() {
   let newSeries = [
     {
@@ -178,12 +177,18 @@ yy();
 console.log(varsd);
 console.log(vars);
 console.log(varsw);
-// let arr5= ["Java", "JavaScript", "Python", "C++", "PHP"]
-// let ff=[]
-// arr5.reduce(d=>{
-// ff.push()
-// })
 
+// Ex 11: Use reduce()  function to return the longest string in an array of strings.
+// ["Java", "JavaScript", "Python", "C++", "PHP"]
+
+let ar = ["Java", "JavaScript", "Python", "C++", "PHP"];
+let longest = ar.reduce((accumulator, currentValue)=>{
+    return (accumulator.length > currentValue.length) ? accumulator : currentValue;
+});
+console.log(longest);
+
+
+// Ex 12: Create a function displayName that, given the pokemon data, below, uses reduce to return an array containing the names of the characters.
 let pokemonData = [
   {
     game_index: 76,
